@@ -12,7 +12,7 @@ _
 
 ### Goal
 
-Run a 10 small random forest times on a univariate time series to predict the next 10 days.  Each model predicts one of the days ahead.  Compare the RMSE to AutoARIMA.  View the plots of each
+Run a 10 small random forest times on each of 30 univariate time series to predict the next 10 days.  Each model predicts one of the days ahead.  Compare the RMSE to AutoARIMA.  View the plots of each
 
 ### Data Sources
 
@@ -66,13 +66,18 @@ Run a 10 small random forest times on a univariate time series to predict the ne
   - X Combine all data
   - X Plot the 10 plots and save the image
   - X Save to table
-- Spot Check
-  - Load from table
-  - Date as index
-  - Use last 10 days as the test set
-  - Check the average and persistence RMSE
-  - Check Auto ARIMA RMSE
-  - Check lag 8 Random Forest RMSE
+- Spot Check Algorithms
+  - X Load from table
+  - X Loop over model keys (break after one iteration for dev)  
+  - X Loop over days forecast ahead
+  - X Load model key and drop that column
+  - X Date as index
+  - X Get the y values
+  - X Use last 10 days as the test set
+  - X Chose not to use CV because I don't want to tune the algorithms
+  - X Check the average and persistence MAPE 1 day ahead
+  - Check Auto ARIMA MAPE 1 day ahead
+  - Check lag 8 Random Forest MAPE 1 day ahead
   - Record all results in a pandas then CSV file
 - Improve
   - Skip
