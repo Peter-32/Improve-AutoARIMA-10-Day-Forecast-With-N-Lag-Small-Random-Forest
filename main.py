@@ -93,7 +93,8 @@ def do_prepare_data():
         df['Date'] = df.index
         prepared_df = pd.concat([prepared_df, df])
     prepared_df = sqldf("select model_key, Date, Order_Demand from prepared_df ORDER BY 1,2", locals())
-    prepared_df.to_csv("tables/2_data_prepared.csv")
+    print(prepared_df.dtypes)
+    prepared_df.to_csv("tables/2_data_prepared.csv", index=False)
     prepared_df.set_index(['Date'], inplace=True)
     ten_plots(df=prepared_df, filename="3_prepared_data")
 
@@ -129,7 +130,7 @@ def plot(df, model_key, filename):
 # do_exploration()
 
 ### Prepare data
-# do_prepare_data()
+do_prepare_data()
 
 
 
