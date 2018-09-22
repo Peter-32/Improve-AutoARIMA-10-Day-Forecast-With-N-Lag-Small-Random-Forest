@@ -1,14 +1,6 @@
-# Spot-Check-RF-Vs-AutoARIMA
+# Improve-AutoARIMA-10-Day-Forecast-With-N-Lag-Small-Random-Forest
 
-_
-
-### Prerequisites
-
-_
-
-### Installing
-
-_
+Click here to see the [Blog Post](http://data-in-model-out.com/improve-autoarima-10-day-forecast-with-n-lag-small-random-forest/)
 
 ### Question
 
